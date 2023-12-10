@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
 
     private UnityEngine.AI.NavMeshAgent navAgent;
 
+    public bool isDead;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -35,6 +37,7 @@ public class Enemy : MonoBehaviour
             {
                 animator.SetTrigger("DIE3");
             }
+            isDead = true;
         }
         else
         {

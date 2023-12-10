@@ -6,6 +6,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public Camera playerCamera;
+    public int weaponDamage;
 
     // Shooting
     public bool isShooting, readyToShoot;
