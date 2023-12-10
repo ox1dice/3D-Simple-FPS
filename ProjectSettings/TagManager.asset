@@ -12,6 +12,7 @@ TagManager:
   - Zombie
   - Enemy
   - ZombieHand
+  - Weapon
   layers:
   - Default
   - TransparentFX

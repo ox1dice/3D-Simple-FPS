@@ -38,10 +38,12 @@ public class Enemy : MonoBehaviour
                 animator.SetTrigger("DIE3");
             }
             isDead = true;
+            SoundManager.Instance.zombieChannel.PlayOneShot(SoundManager.Instance.zombieDeath);
         }
         else
         {
             animator.SetTrigger("DAMAGE");
+            SoundManager.Instance.zombieChannel.PlayOneShot(SoundManager.Instance.zombieHurt);
         }
     }
     private void OnDrawGizmos()

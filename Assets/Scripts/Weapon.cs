@@ -76,6 +76,9 @@ public class Weapon : MonoBehaviour
             Quaternion.identity
         );
 
+        Bullet bul = bullet.GetComponent<Bullet>();
+        bul.bulletDamage = weaponDamage;
+
         // Pointing the bullet to face the shooting direction
         bullet.transform.forward = shootingDirection;
 
