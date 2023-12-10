@@ -18,7 +18,7 @@ public class Zombie : MonoBehaviour
 
         if(HP <= 0)
         {
-            animator.SetTrigger("DIE";)
+            animator.SetTrigger("DIE");
             Destroy(gameObject);
         }
         else
