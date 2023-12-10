@@ -644,12 +644,12 @@ MonoBehaviour:
   playerCamera: {fileID: 5761896877674132902}
   isShooting: 0
   readyToShoot: 0
-  shootingDelay: 0.1
+  shootingDelay: 0.2
   bulletsPerBurst: 3
   burstBulletLeft: 0
-  spreadIntensity: 0
+  spreadIntensity: 0.2
   bulletPrefab: {fileID: 7846988739577383074, guid: a9cc24630f3ef6547b33aab52a6f33a8, type: 3}
   bulletSpawn: {fileID: 460464223996339952}
-  bulletVelocity: 100
+  bulletVelocity: 500
   bulletPrefabLifeTime: 3
   currentShootingMode: 2
