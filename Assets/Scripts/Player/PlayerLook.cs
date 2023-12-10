@@ -5,10 +5,11 @@ using UnityEngine;
 public class PlayerLook : MonoBehaviour
 {
     public Camera cam;
-    private float xRotation = 0f;
 
-    public float xSensitivity = 30f;
-    public float ySensitivity = 30f;
+    float xRotation = 0f;
+
+    public float xSensitivity = 10f;
+    public float ySensitivity = 10f;
 
     void Start()
     {
@@ -18,17 +19,17 @@ public class PlayerLook : MonoBehaviour
     public void ProcessLook(Vector2 input)
     {
         // Mouse inputs
-        float mouseX = input.x;
-        float mouseY = input.y;
+        float mouseX = input.x * xSensitivity * Time.deltaTime;
+        float mouseY = input.y * xSensitivity * Time.deltaTime;
 
         //Calculate Rotation
-        xRotation -= (mouseY * Time.deltaTime) * ySensitivity;
+        xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         //Apply Camera Transform
         cam.transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
 
         //Rotate Left and Right
-        transform.Rotate(Vector3.up * (mouseX * Time.deltaTime) * xSensitivity);
+        transform.Rotate(Vector3.up * mouseX);
     }
 }
