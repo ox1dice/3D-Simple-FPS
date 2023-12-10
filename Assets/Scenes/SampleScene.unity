@@ -513,9 +513,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5249eb821046094187c2c4d6de9496c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  gravity: -19.6
-  jumpHeight: 1.2
+  speed: 8
+  gravity: -29.43
+  jumpHeight: 2
 --- !u!114 &620345244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -621,8 +621,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.6037736, g: 0.5899834, b: 0.504094, a: 1}
-  m_Intensity: 0.5
+  m_Color: {r: 0.8490566, g: 0.754001, b: 0.62077254, a: 1}
+  m_Intensity: 0.6
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1888,13 +1888,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4079421428980575006, guid: dc6b7026f66002745b5a6b30ca71abfd, type: 3}
+      propertyPath: m_Height
+      value: 3.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079421428980575006, guid: dc6b7026f66002745b5a6b30ca71abfd, type: 3}
+      propertyPath: m_StepOffset
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 8836730983522766680, guid: dc6b7026f66002745b5a6b30ca71abfd, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8836730983522766680, guid: dc6b7026f66002745b5a6b30ca71abfd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.27
       objectReference: {fileID: 0}
     - target: {fileID: 8836730983522766680, guid: dc6b7026f66002745b5a6b30ca71abfd, type: 3}
       propertyPath: m_LocalPosition.y
