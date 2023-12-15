@@ -8,6 +8,9 @@ public class SoundManager : MonoBehaviour
 
     public AudioSource pistolChannel;
 
+    public AudioSource shootingSound1911;
+    public AudioSource reloadingSound1911;
+    public AudioSource emptyMagazineSound1911;
 
 
     public AudioSource zombieChannel;
