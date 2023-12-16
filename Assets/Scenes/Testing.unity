@@ -3520,7 +3520,7 @@ MonoBehaviour:
   emptyMagazineSound: {fileID: 771794831}
   shootingSoundPistol: {fileID: 8300000, guid: 3be0054c2ebaa3a4f80b8cae00d3b901, type: 3}
   shootingSoundAR: {fileID: 8300000, guid: 9713556a0f08a364da584ff425c97808, type: 3}
-  reloadingSoundPistol: {fileID: 8300000, guid: 1316eb5719119a54bb645f761e435d35, type: 3}
+  reloadingSoundPistol: {fileID: 8300000, guid: 5cb97a28794a69b4488680f6faecb22d, type: 3}
   reloadingSoundAR: {fileID: 8300000, guid: cae6a39f3558d6d49b679c8fa0d12ab9, type: 3}
   zombieChannel: {fileID: 0}
   zombieWalking: {fileID: 0}
@@ -9486,7 +9486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1836015340502686953, guid: dc6b7026f66002745b5a6b30ca71abfd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2862637752973221833, guid: dc6b7026f66002745b5a6b30ca71abfd, type: 3}
       propertyPath: backHealthBar
@@ -9603,6 +9603,10 @@ PrefabInstance:
     - target: {fileID: 8455288130524981024, guid: 23895bfa7e7e8254ea85ed63df97f4cc, type: 3}
       propertyPath: m_Name
       value: AssaultRifle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8455288130524981024, guid: 23895bfa7e7e8254ea85ed63df97f4cc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
