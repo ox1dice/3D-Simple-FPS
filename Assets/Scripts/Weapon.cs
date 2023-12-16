@@ -7,6 +7,8 @@ using TMPro;
 public class Weapon : MonoBehaviour
 {
     public int weaponDamage;
+ 
+    public bool isActiveWeapon;
 
     // Shooting
     public bool isShooting, readyToShoot;
@@ -27,12 +29,16 @@ public class Weapon : MonoBehaviour
     public float bulletPrefabLifeTime = 3f;
 
     public GameObject muzzleEffect;
-    Animator animator;
+    internal Animator animator;
 
     // Loading
     public float reloadTime;
     public int magazineSize, bulletsLeft;
     public bool isReloading;
+
+    // Weapon spawn
+    public Vector3 spawnPosition;
+    public Vector3 spawnRotation;
 
     public enum WeaponModel
     {
@@ -63,47 +69,50 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-
-        if(bulletsLeft == 0 && isShooting)
+        if (isActiveWeapon)
         {
-            SoundManager.Instance.emptyMagazineSound.Play();
-        }
+            GetComponent<Outline>().enabled = false;
 
-        if (currentShootingMode == ShootingMode.Auto)
-        {
-            // Holding down left click
-            isShooting = Input.GetKey(KeyCode.Mouse0);
-        }
-        else if (currentShootingMode == ShootingMode.Single || 
-                 currentShootingMode == ShootingMode.Burst)
-        {
-            // Clicking left click once
-            isShooting = Input.GetKeyDown(KeyCode.Mouse0);
-        }
+            if (bulletsLeft == 0 && isShooting)
+            {
+                SoundManager.Instance.emptyMagazineSound.Play();
+            }
 
-        if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && isReloading == false)
-        {
-            Reload();
+            if (currentShootingMode == ShootingMode.Auto)
+            {
+                // Holding down left click
+                isShooting = Input.GetKey(KeyCode.Mouse0);
+            }
+            else if (currentShootingMode == ShootingMode.Single ||
+                     currentShootingMode == ShootingMode.Burst)
+            {
+                // Clicking left click once
+                isShooting = Input.GetKeyDown(KeyCode.Mouse0);
+            }
+
+            if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && isReloading == false)
+            {
+                Reload();
+            }
+
+            // if u want to automatically reload when magazine is empty
+
+            if (readyToShoot && isShooting == false && isReloading == false && bulletsLeft <= 0)
+            {
+                //Reload();
+            }
+
+            if (readyToShoot && isShooting && bulletsLeft > 0)
+            {
+                burstBulletLeft = bulletsPerBurst;
+                FireWeapon();
+            }
+
+            if (AmmoManager.Instance.ammoDisplay != null)
+            {
+                AmmoManager.Instance.ammoDisplay.text = $"{bulletsLeft / bulletsPerBurst}/{magazineSize / bulletsPerBurst}";
+            } 
         }
-
-        // if u want to automatically reload when magazine is empty
-
-        if(readyToShoot && isShooting == false && isReloading == false && bulletsLeft <= 0)
-        {
-            //Reload();
-        }
-
-        if (readyToShoot && isShooting && bulletsLeft > 0)
-        {
-            burstBulletLeft = bulletsPerBurst;
-            FireWeapon();
-        }
-
-        if(AmmoManager.Instance.ammoDisplay !=null)
-        {
-            AmmoManager.Instance.ammoDisplay.text = $"{bulletsLeft/bulletsPerBurst}/{magazineSize/bulletsPerBurst}";
-        }
-
     }
 
     private void FireWeapon()

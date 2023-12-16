@@ -13,7 +13,7 @@ public class PlayerMotor : MonoBehaviour
     bool crouching = false;
     bool sprinting = false;
     
-    public float speed = 8f;
+    public float speed = 5f;
     public float gravity = -9.81f * 3;
     public float jumpHeight = 2f;
 
@@ -78,11 +78,11 @@ public class PlayerMotor : MonoBehaviour
 
         if (crouching)
         {
-            speed = 4;
+            speed = 3;
         }
         else
         {
-            speed = 8;
+            speed = 5;
         }
     }
 
@@ -92,11 +92,11 @@ public class PlayerMotor : MonoBehaviour
 
         if(sprinting)
         {
-            speed = 12;
+            speed = 8;
         } 
         else 
         {
-            speed = 8;
+            speed = 5;
         }
     }
 }
