@@ -347,7 +347,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289245615440671249}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.36257336, y: 0.3570657, z: -0.6054396, w: 0.61195385}
+  m_LocalRotation: {x: -0.36257538, y: 0.3570635, z: -0.60544056, w: 0.61195296}
   m_LocalPosition: {x: 0.38, y: 1.381, z: -2.794}
   m_LocalScale: {x: 2.000031, y: 1.9998143, z: 2.0001493}
   m_ConstrainProportionsScale: 1
@@ -361,7 +361,7 @@ Transform:
   - {fileID: 7381159808555607251}
   - {fileID: 6989091874085677882}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -0.784, y: 60, z: -90}
+  m_LocalEulerAnglesHint: {x: -0.653, y: 61.176, z: -89.773}
 --- !u!114 &108044611369595524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,7 +374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963b9e3e718f3034a9b0c51c71a53e2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponDamage: 0
+  weaponDamage: 20
   isActiveWeapon: 0
   isShooting: 0
   readyToShoot: 0
