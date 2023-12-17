@@ -25,14 +25,18 @@ public class PlayerInteract : MonoBehaviour
     {
         playerUI.updateText(string.Empty);
 
-        // Creates a ray at the center of the camera
         Ray ray = new Ray(cam.transform.position, cam.transform.forward);
-        RaycastHit hitInfo; // Variable to store collision informations
-        if(Physics.Raycast(ray, out hitInfo, distance, mask)) {
-            if(hitInfo.collider.GetComponent<Interactable>() != null) {
+        RaycastHit hitInfo; 
+
+        if(Physics.Raycast(ray, out hitInfo, distance, mask)) 
+        {
+            if(hitInfo.collider.GetComponent<Interactable>() != null) 
+            {
                 Interactable interactable = hitInfo.collider.GetComponent<Interactable>();
                 playerUI.updateText(interactable.promptMessage);
-                if(inputManager.onFoot.Interact.triggered) {
+
+                if(inputManager.onFoot.Interact.triggered) 
+                {
                     interactable.BaseInteract();
                 }
             }
