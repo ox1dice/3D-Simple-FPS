@@ -95,11 +95,10 @@ public class Weapon : MonoBehaviour
                 Reload();
             }
 
-            // if u want to automatically reload when magazine is empty
-
+            // Automatically reload when magazine is empty
             if (readyToShoot && isShooting == false && isReloading == false && bulletsLeft <= 0)
             {
-                //Reload();
+                Reload();
             }
 
             if (readyToShoot && isShooting && bulletsLeft > 0)

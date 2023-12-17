@@ -19,13 +19,6 @@ public class HUDManager : MonoBehaviour
     public Image activeWeaponUI;
     public Image unActiveWeaponUI;
 
-    [Header("Throwables")]
-    public Image lethalUI;
-    public TextMeshProUGUI lethalAmountUI;
-
-    public Image tacticalUI;
-    public TextMeshProUGUI tacticalAmountUI;
-
     public Sprite emptySlot;
 
     private Dictionary<Weapon.WeaponModel, Sprite> weaponSprites = new Dictionary<Weapon.WeaponModel, Sprite>();
