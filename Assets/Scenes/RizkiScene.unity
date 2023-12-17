@@ -393,11 +393,6 @@ Transform:
   - {fileID: 114284092}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &165405272 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 460464223996339952, guid: dc6b7026f66002745b5a6b30ca71abfd, type: 3}
-  m_PrefabInstance: {fileID: 3489271117501966486}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &167406366
 GameObject:
   m_ObjectHideFlags: 0
@@ -4671,12 +4666,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca593bb042eda5a40affc1b93a2f2007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShootingChannel: {fileID: 0}
+  emptyMagazineSound: {fileID: 0}
+  shootingSoundPistol: {fileID: 0}
+  shootingSoundAR: {fileID: 0}
+  reloadingSoundPistol: {fileID: 0}
+  reloadingSoundAR: {fileID: 0}
+  zombieChannel: {fileID: 2049237003}
   zombieWalking: {fileID: 8300000, guid: f1ff3e33006a291449618f6fc613e928, type: 3}
   zombieChase: {fileID: 8300000, guid: e1e7f406c66d0c34f94726e83f3b5cbd, type: 3}
   zombieAttack: {fileID: 8300000, guid: bc2baab908f1b004691a6ecf7044f61c, type: 3}
   zombieHurt: {fileID: 8300000, guid: b771cd0787c16e64e8e8ba11c3c83734, type: 3}
   zombieDeath: {fileID: 8300000, guid: 9df77b70cadc8384ca073a95aebc666f, type: 3}
-  zombieChannel: {fileID: 2049237003}
   playerChannel: {fileID: 2049237005}
   playerHurt: {fileID: 8300000, guid: 3b1f5881e0aa10e419d56366c7002258, type: 3}
   playerDie: {fileID: 8300000, guid: 71748071c00fbd84e81a90c9cc53b39d, type: 3}
@@ -5095,7 +5096,7 @@ PrefabInstance:
     - target: {fileID: 325441204097686203, guid: dc6b7026f66002745b5a6b30ca71abfd, type: 3}
       propertyPath: bulletSpawn
       value: 
-      objectReference: {fileID: 165405272}
+      objectReference: {fileID: 0}
     - target: {fileID: 325441204097686203, guid: dc6b7026f66002745b5a6b30ca71abfd, type: 3}
       propertyPath: bulletPrefab
       value: 
@@ -5167,7 +5168,7 @@ PrefabInstance:
     - target: {fileID: 8464713134891985259, guid: dc6b7026f66002745b5a6b30ca71abfd, type: 3}
       propertyPath: bulletSpawn
       value: 
-      objectReference: {fileID: 165405272}
+      objectReference: {fileID: 0}
     - target: {fileID: 8464713134891985259, guid: dc6b7026f66002745b5a6b30ca71abfd, type: 3}
       propertyPath: bulletPrefab
       value: 
@@ -5322,7 +5323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2688169269843417172, guid: cf9ce761530dd0245adc9b1dd667e220, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6356593116364830517, guid: cf9ce761530dd0245adc9b1dd667e220, type: 3}
       propertyPath: m_LocalPosition.x
